@@ -5,7 +5,7 @@ body{
 
 .outer-circle{
     width: 100px;
-    height: 105px;
+    height: 100px;
     background-color: red;
     animation: kruchu-verchu 2s linear 1, poehali 2s linear 1; 
     transition: all 1s ease;
@@ -13,33 +13,62 @@ body{
     left: 70%;
     transition: border-radius;
     transition-duration: 3s;
-
 }
 .inner-circle{
     position: relative;
-    width:35px;
-    height: 30px;
-    background-color: white;
+    width:40px;
+    height: 40px;
+    background-color: red;
     margin: auto;
-    top:35px;
-    border-radius: 50%;
-    animation: kruchu-verchu 1s linear infinite;
+    top:26.5px;
+    padding-top: 0px;
+    animation: kruchu-verchu 1s linear 1.5 , krug 2s linear 1;
+    text-align: center;
 }
 
+.inner-circle span{
+    display: inline-block;
+    color: white;
+    font-size: 40px;
+    animation: 1.7s HiddenText;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
 
+@keyframes HiddenText {
+    99% {
+      visibility: hidden;
+    }
+    100% {
+      visibility: visible;
+    }
+  }
 
 @keyframes kruchu-verchu {
     from {transform: rotate(0deg)}
     to {transform: rotate(360deg)}
 }
 
+@keyframes krug{
+    0%   { border-radius: 50% 50% 50% 50%; background: white; }
+    50%  { border-radius: 50% 50% 50% 50% ; background: white; }
+    70%  { border-radius: 30% 50% 30% 50% ; background: white; }
+    75% { border-radius: 20% 50% 20% 50%; background: white;}
+    80% { border-radius: 10% 40% 10% 40%; background: white;}
+    85% { border-radius: 0 30% 0 30%; background: white;}
+    90% { border-radius: 0 20% 0 20%; background: white;}
+    95% { border-radius: 0 10% 0 10%;}
+    100% {border-radius: 0 0 0 0}
+}
+
 @keyframes poehali {
-    0%   { left: -150px; border-radius: 50% 50% 50% 50%}
-    50%  { border-radius: 50% 50% 50% 50%}
-    70%  { border-radius: 30% 50% 30% 50%}
+    0%   { left: -150px; border-radius: 50% 50% 50% 50%; border-left:2px solid green; border-right:1px solid green;}
+    50%  { border-radius: 50% 50% 50% 50% ; border-left:1px solid green; border-right:1px solid green;}
+    70%  { border-radius: 30% 50% 30% 50% ; border-left:1px solid green; border-right:1px solid green;}
     75% { border-radius: 20% 50% 20% 50%}
-    80% { border-radius: 10% 30% 10% 30%}
-    85% { border-radius: 0 20% 0 20%}
-    90% { border-radius: 0 10% 0 10%}
+    80% { border-radius: 10% 40% 10% 40%}
+    85% { border-radius: 0 30% 0 30%}
+    90% { border-radius: 0 20% 0 20%}
+    95% { border-radius: 0 10% 0 10%}
     100% { left: 70%; border-radius: 0 0 0 0}
   }
