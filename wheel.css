@@ -4,13 +4,14 @@ body{
 }
 
 .outer-circle{
-    width: 50px;
-    height: 50px;
+    width: 51px;
+    height: 51px;
     background-color: red;
     animation: kruchu-verchu 2s linear 1, poehali 2s linear 1 forwards,antiBlink 2.5s ease-in-out infinite 1s /*, blink 2s linear infinite 1.5s*/;
     transition: all 1s ease;
-    position: relative;
-    left: 70%;
+    position: absolute;
+    right: 0;
+    top: 0px;
     transition: border-radius;
     transition-duration: 3s;
 }
@@ -37,20 +38,23 @@ body{
     
 }
 .logoText{
-  float: right;
   color: white;
-  position: relative;
-  margin-right: 30%;
-  margin-top: 10px;
+  position: absolute;
+  margin-left: 12%;
   font-size: 30px;
+  top: 10px;
   /*animation: 2s HiddenText;
   animation-fill-mode: forwards;
   visibility: hidden;*/
 }
 .roditel{
   position: absolute;
-  width: 100%;
-  height: 50px;
+    height: 51px;
+    width: 255px;
+    background: black;
+    z-index: 0;
+    margin-left: 70%;
+  
 }
 
 @keyframes HiddenText {
@@ -68,13 +72,13 @@ body{
 }
 
 @keyframes krug{
-    0%   { border-radius: 50% 50% 50% 50%; background: gold; }
-    100% {border-radius: 50% 50% 50% 50%; background: gold}
+    0%   { border-radius: 50% 50% 50% 50%; background: #C0C0C0; }
+    100% {border-radius: 50% 50% 50% 50%; background: #C0C0C0;}
 }
 
 @keyframes poehali {
-    0%   { left: 60%;z-index: -1; border-radius: 50% 50% 50% 50%; }
-    99% { left: 70%; z-index: -1; border-radius: 50% 50% 50% 50%; }
+    0%   { left: 8%;z-index: -1; border-radius: 50% 50% 50% 50%; }
+    99% { left: 80%;z-index: -1; border-radius: 50% 50% 50% 50%; }
   }
   
 @keyframes blink{
